@@ -1,4 +1,3 @@
-```python
 import streamlit as st
 
 
@@ -76,4 +75,4 @@ def show_header():
         """,
         unsafe_allow_html=True,
     )
-```
+
