@@ -88,7 +88,7 @@ if page == "Predict Placement":
 
 elif page == "Project Overview":
     st.subheader("About the Project")
-    st.write("This beginner-friendly project uses a Random Forest classifier to estimate whether a student may be placed based on selected academic and employability indicators.")
+    st.write("A machine learning project using Random Forest and Streamlit to predict student placement outcomes based on academic performance and employability indicators.")
     a, b, c = st.columns(3)
     a.metric("ML Algorithm", "Random Forest")
     b.metric("App Framework", "Streamlit")
