@@ -13,11 +13,23 @@ show_header()
 
 with st.sidebar:
     st.header("📌 Navigation")
-    page = st.radio("Choose a page", ["Predict Placement", "Project Overview", "Model Information"])
+    page = st.radio("Choose a page", [ "Project Overview", "Predict Placement","Model Information"])
     st.divider()
     st.caption("This application demonstrates student placement prediction using machine learning and academic performance data.")
 
-if page == "Predict Placement":
+if page == "Project Overview":
+    st.subheader("About the Project")
+    st.write("A machine learning project using Random Forest and Streamlit to predict student placement outcomes based on academic performance and employability indicators.")
+    # a, b, c = st.columns(3)
+    # a.metric("ML Algorithm", "Random Forest")
+    # b.metric("App Framework", "Streamlit")
+    # c.metric("Input Features", "6")
+    st.markdown("### Project Workflow")
+    st.markdown("1. Create a small demonstration dataset.\n2. Train a classification model.\n3. Save the model with Joblib.\n4. Collect student details through Streamlit.\n5. Display estimated probability and practical suggestions.")
+    st.markdown("### Limitations")
+    st.write("The bundled data is synthetic and intended for learning. It does not represent any real college or hiring outcome. Model output can reflect bias in data and must not be used as the sole basis for decisions.")
+
+elif page == "Predict Placement":
     left, right = st.columns([2.85, 1.85], gap="large")
     with left:
         st.subheader("🧑‍🎓 Student Details")
@@ -86,17 +98,7 @@ if page == "Predict Placement":
             st.error(f"Could not create prediction: {exc}")
             st.info("If this is the first run, click the button again after the model is created.")
 
-elif page == "Project Overview":
-    st.subheader("About the Project")
-    st.write("A machine learning project using Random Forest and Streamlit to predict student placement outcomes based on academic performance and employability indicators.")
-    # a, b, c = st.columns(3)
-    # a.metric("ML Algorithm", "Random Forest")
-    # b.metric("App Framework", "Streamlit")
-    # c.metric("Input Features", "6")
-    st.markdown("### Project Workflow")
-    st.markdown("1. Create a small demonstration dataset.\n2. Train a classification model.\n3. Save the model with Joblib.\n4. Collect student details through Streamlit.\n5. Display estimated probability and practical suggestions.")
-    st.markdown("### Limitations")
-    st.write("The bundled data is synthetic and intended for learning. It does not represent any real college or hiring outcome. Model output can reflect bias in data and must not be used as the sole basis for decisions.")
+
 
 else:
     st.subheader("Model Information")
