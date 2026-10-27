@@ -8,8 +8,8 @@ from style import load_css, show_header
 
 st.set_page_config(page_title="Student Placement Predictor", page_icon="🎓", layout="wide")
 
-load_css()
-show_header()
+load_css():
+show_header():
 
 with st.sidebar:
     st.header("📌 Navigation")
