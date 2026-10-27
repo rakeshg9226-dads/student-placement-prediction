@@ -15,10 +15,10 @@ with st.sidebar:
     st.header("📌 Navigation")
     page = st.radio("Choose a page", ["Predict Placement", "Project Overview", "Model Information"])
     st.divider()
-    st.caption("Educational demo only. Predictions are estimates, not guarantees.")
+    st.caption("This application demonstrates student placement prediction using machine learning and academic performance data.")
 
 if page == "Predict Placement":
-    left, right = st.columns([1.15, 0.85], gap="large")
+    left, right = st.columns([1.15, 2.85], gap="large")
     with left:
         st.subheader("🧑‍🎓 Student Details")
         with st.form("student_form"):
