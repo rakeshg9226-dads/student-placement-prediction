@@ -3,7 +3,7 @@ import streamlit as st
 def load_css():
     st.markdown("""
     <style>
-    .stApp {
+    .stApp    
         background: linear-gradient(135deg, #eef5ff 0%, #f7f9fc 55%, #e8fff7 100%);
     }
 
