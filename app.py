@@ -18,7 +18,7 @@ with st.sidebar:
     st.caption("This application demonstrates student placement prediction using machine learning and academic performance data.")
 
 if page == "Predict Placement":
-    left, right = st.columns([2.85, 2.85], gap="large")
+    left, right = st.columns([2.85, 1.85], gap="large")
     with left:
         st.subheader("🧑‍🎓 Student Details")
         with st.form("student_form"):
